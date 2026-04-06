@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teale — Instant AI Compute, 100x Cheaper</title>
-  <meta name="description" content="AI inference at 1/100th the cost of OpenAI. No account needed — deposit USDC, get an API key, start building. Powered by idle Apple Silicon.">
-  <meta property="og:title" content="Teale — Instant AI Compute, 100x Cheaper">
-  <meta property="og:description" content="AI inference at 1/100th the cost of OpenAI. No account, no signup. Just USDC and an API key.">
+  <title>Teale — AI for Everyone</title>
+  <meta name="description" content="Run AI for free on your Mac. Or access the network for 100x less than OpenAI. No subscription. No account. AI that's actually affordable.">
+  <meta property="og:title" content="Teale — AI for Everyone">
+  <meta property="og:description" content="AI for free on your Mac. 100x cheaper than OpenAI on the network. Earn money sharing your idle compute.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://teale.com">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍃</text></svg>">
@@ -35,541 +35,315 @@
     }
 
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
+      position: fixed; top: 0; width: 100%;
       padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
       z-index: 100;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       background: rgba(255,255,255,0.85);
       border-bottom: 1px solid rgba(0,0,0,0.06);
     }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--teal);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-
+    .logo { font-size: 1.5rem; font-weight: 700; color: var(--teal); text-decoration: none; letter-spacing: -0.02em; }
     .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--gray-700);
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+    .nav-links a { text-decoration: none; color: var(--gray-700); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--teal); }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.5rem;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-      cursor: pointer;
-      border: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.7rem 1.5rem; border-radius: 10px;
+      font-size: 0.95rem; font-weight: 600;
+      text-decoration: none; transition: all 0.2s; cursor: pointer; border: none;
     }
     .btn-primary { background: var(--teal); color: var(--white); }
-    .btn-primary:hover {
-      background: var(--teal-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(13,148,136,0.3);
-    }
-    .btn-secondary {
-      background: var(--teal-50);
-      color: var(--teal-dark);
-      border: 1px solid var(--teal-100);
-    }
+    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(13,148,136,0.3); }
+    .btn-secondary { background: var(--teal-50); color: var(--teal-dark); border: 1px solid var(--teal-100); }
     .btn-secondary:hover { background: var(--teal-100); }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,0.3);
-    }
-    .btn-outline:hover {
-      border-color: var(--white);
-      background: rgba(255,255,255,0.1);
-    }
-    .btn-large {
-      padding: 1rem 2.5rem;
-      font-size: 1.1rem;
-      border-radius: 14px;
-    }
+    .btn-dark { background: var(--gray-900); color: var(--white); }
+    .btn-dark:hover { background: var(--gray-800); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .btn-outline-light { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.25); }
+    .btn-outline-light:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
     .btn-white { background: var(--white); color: var(--teal-dark); }
-    .btn-white:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
+    .btn-white:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .btn-large { padding: 1rem 2.5rem; font-size: 1.1rem; border-radius: 14px; }
 
-    /* Hero */
+    /* ── Hero ── */
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
       text-align: center;
-      padding: 8rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
-      background: var(--gray-900);
-      color: var(--white);
+      padding: 8rem 2rem 5rem;
+      position: relative; overflow: hidden;
     }
-
     .hero::before {
-      content: '';
-      position: absolute;
-      top: -40%;
-      left: -20%;
-      width: 140%;
-      height: 140%;
-      background: radial-gradient(ellipse at 30% 20%, rgba(13,148,136,0.15) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 60%, rgba(20,184,166,0.1) 0%, transparent 50%);
-      z-index: 0;
-    }
-
-    .hero > * { position: relative; z-index: 1; }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: rgba(13,148,136,0.15);
-      border: 1px solid rgba(13,148,136,0.3);
-      border-radius: 100px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--teal-light);
-      margin-bottom: 2rem;
-    }
-
-    .hero-badge .dot {
-      width: 8px;
-      height: 8px;
-      background: var(--teal-light);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      content: ''; position: absolute; inset: -40% -20%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(13,148,136,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 60%, rgba(20,184,166,0.06) 0%, transparent 50%);
+      z-index: -1;
     }
 
     .hero h1 {
       font-size: clamp(3rem, 7vw, 5.5rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      max-width: 900px;
-      margin-bottom: 1.5rem;
+      font-weight: 800; line-height: 1.05; letter-spacing: -0.03em;
+      max-width: 800px; margin-bottom: 1.5rem;
     }
-
     .hero h1 .highlight {
-      background: linear-gradient(135deg, var(--teal-light), #5eead4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-
-    .hero p.subtitle {
+    .hero .subtitle {
       font-size: clamp(1.1rem, 2vw, 1.35rem);
-      color: var(--gray-400);
-      max-width: 620px;
-      line-height: 1.6;
-      margin-bottom: 2.5rem;
+      color: var(--gray-700); max-width: 640px; line-height: 1.6; margin-bottom: 2.5rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    /* ── Two Paths ── */
+    .paths-section { padding: 5rem 2rem; }
+    .paths-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+      max-width: 1000px; margin: 0 auto;
+    }
+    .path-card {
+      border-radius: 20px; padding: 3rem 2.5rem;
+      display: flex; flex-direction: column;
+    }
+    .path-card.use-ai {
+      background: var(--gray-900); color: var(--white);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+    .path-card.earn {
+      background: var(--teal-50);
+      border: 2px solid var(--teal-100);
+    }
+    .path-label {
+      font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 1.2rem;
+    }
+    .path-card.use-ai .path-label { color: var(--teal-light); }
+    .path-card.earn .path-label { color: var(--teal-dark); }
+
+    .path-card h2 {
+      font-size: 1.8rem; font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 1rem; line-height: 1.15;
+    }
+    .path-card p {
+      font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; flex: 1;
+    }
+    .path-card.use-ai p { color: var(--gray-400); }
+    .path-card.earn p { color: var(--gray-700); }
+
+    .path-card ul {
+      list-style: none; margin-bottom: 2rem;
+      font-size: 0.95rem; line-height: 2;
+    }
+    .path-card.use-ai ul li { color: var(--gray-400); }
+    .path-card.earn ul li { color: var(--gray-700); }
+    .path-card ul li::before {
+      content: '\2713'; margin-right: 0.6rem; font-weight: 700;
+    }
+    .path-card.use-ai ul li::before { color: var(--teal-light); }
+    .path-card.earn ul li::before { color: var(--teal); }
+
+    .path-price {
+      font-size: 2rem; font-weight: 800; margin-bottom: 0.25rem;
+    }
+    .path-card.use-ai .path-price { color: var(--teal-light); }
+    .path-card.earn .path-price { color: var(--teal); }
+    .path-price-note {
+      font-size: 0.85rem; margin-bottom: 1.5rem;
+    }
+    .path-card.use-ai .path-price-note { color: var(--gray-400); }
+    .path-card.earn .path-price-note { color: var(--gray-700); }
+
+    /* ── Section helpers ── */
+    section { padding: 6rem 2rem; }
+    .section-center { max-width: 1100px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 1rem;
+    }
+    .section-header p {
+      font-size: 1.15rem; color: var(--gray-700);
+      max-width: 580px; margin: 0 auto; line-height: 1.6;
     }
 
-    .hero-ctas {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 4rem;
-    }
+    /* ── Cost Comparison ── */
+    .cost-section { background: var(--teal-50); }
 
-    /* Hero terminal */
-    .hero-terminal {
-      width: 100%;
-      max-width: 700px;
-      text-align: left;
+    .cost-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+      max-width: 900px; margin: 0 auto;
     }
+    .cost-card {
+      border-radius: 16px; padding: 2.5rem 2rem; text-align: center;
+    }
+    .cost-card.them {
+      background: var(--white); border: 1px solid rgba(0,0,0,0.08);
+    }
+    .cost-card.free {
+      background: var(--gray-900); color: var(--white);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .cost-card.network {
+      background: var(--gray-900); color: var(--white);
+      box-shadow: 0 15px 30px rgba(13,148,136,0.15);
+      border: 2px solid var(--teal);
+    }
+    .cost-card .provider {
+      font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;
+    }
+    .cost-card.them .provider { color: var(--gray-400); }
+    .cost-card.free .provider { color: var(--teal-light); }
+    .cost-card.network .provider { color: var(--teal-light); }
+    .cost-card .price {
+      font-size: 2.8rem; font-weight: 800; line-height: 1; margin-bottom: 0.25rem;
+    }
+    .cost-card.them .price { color: var(--gray-900); }
+    .cost-card.free .price { color: var(--white); }
+    .cost-card.network .price { color: var(--teal-light); }
+    .cost-card .unit {
+      font-size: 0.85rem; margin-bottom: 1.2rem;
+    }
+    .cost-card.them .unit { color: var(--gray-400); }
+    .cost-card.free .unit, .cost-card.network .unit { color: var(--gray-400); }
+    .cost-card .desc {
+      font-size: 0.9rem; line-height: 1.6;
+    }
+    .cost-card.them .desc { color: var(--gray-700); }
+    .cost-card.free .desc, .cost-card.network .desc { color: var(--gray-400); }
+
+    /* ── Terminal Demo ── */
+    .demo-section { background: var(--gray-900); color: var(--white); }
+    .demo-section .section-header p { color: var(--gray-400); }
 
     .terminal {
-      background: var(--gray-800);
-      border-radius: 12px;
+      max-width: 700px; margin: 0 auto;
+      background: var(--gray-800); border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.08);
       overflow: hidden;
       box-shadow: 0 25px 50px rgba(0,0,0,0.4);
     }
-
     .terminal-bar {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      display: flex; align-items: center; gap: 6px;
       padding: 12px 16px;
-      background: rgba(0,0,0,0.2);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: rgba(0,0,0,0.2); border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .terminal-bar span {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
+    .terminal-bar span { width: 12px; height: 12px; border-radius: 50%; }
     .terminal-bar span:nth-child(1) { background: #ff5f57; }
     .terminal-bar span:nth-child(2) { background: #febc2e; }
     .terminal-bar span:nth-child(3) { background: #28c840; }
-    .terminal-bar .title {
-      flex: 1;
-      text-align: center;
-      font-size: 0.75rem;
-      color: var(--gray-400);
-      font-weight: 500;
-    }
+    .terminal-bar .title { flex:1; text-align:center; font-size:0.75rem; color:var(--gray-400); font-weight:500; }
 
     .terminal-body {
       padding: 1.5rem;
       font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-      font-size: 0.85rem;
-      line-height: 2;
-      color: var(--gray-400);
+      font-size: 0.82rem; line-height: 2; color: var(--gray-400);
     }
-
     .terminal-body .prompt { color: var(--teal-light); }
     .terminal-body .cmd { color: var(--white); }
     .terminal-body .flag { color: #c084fc; }
     .terminal-body .string { color: #fbbf24; }
-    .terminal-body .comment { color: #64748b; }
+    .terminal-body .comment { color: #475569; }
     .terminal-body .output { color: var(--teal-light); }
-    .terminal-body .dim { color: #475569; }
 
     .terminal-step {
-      margin-bottom: 1.2rem;
-      padding-bottom: 1.2rem;
+      margin-bottom: 1.2rem; padding-bottom: 1.2rem;
       border-bottom: 1px solid rgba(255,255,255,0.04);
     }
-    .terminal-step:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-
+    .terminal-step:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
     .terminal-step .step-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--teal);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--teal); font-weight: 700; margin-bottom: 0.5rem;
       font-family: -apple-system, system-ui, sans-serif;
     }
 
-    /* Sections */
-    section { padding: 6rem 2rem; }
-
-    .section-center {
-      max-width: 1100px;
-      margin: 0 auto;
+    /* ── Earn Section ── */
+    .earn-section { }
+    .earn-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;
+      margin-bottom: 3rem;
     }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-    .section-header h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-    .section-header p {
-      font-size: 1.15rem;
-      color: var(--gray-700);
-      max-width: 560px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* Speed stats */
-    .speed-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 800px;
-      margin: 0 auto 4rem;
-    }
-
-    .speed-stat {
-      text-align: center;
-      padding: 2rem 1rem;
-      border-radius: 16px;
-      background: var(--teal-50);
-      border: 1px solid var(--teal-100);
-    }
-
-    .speed-stat .big {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--teal);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    .speed-stat .label {
-      font-size: 0.9rem;
-      color: var(--gray-700);
-    }
-
-    /* Comparison */
-    .compare-section { background: var(--teal-50); }
-
-    .compare-table {
-      max-width: 800px;
-      margin: 0 auto;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--teal-100);
-    }
-
-    .compare-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      border-bottom: 1px solid var(--teal-100);
-    }
-    .compare-row:last-child { border-bottom: none; }
-
-    .compare-row.header {
-      background: var(--gray-900);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .compare-cell {
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-    }
-    .compare-row:not(.header) .compare-cell:first-child {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .compare-row:not(.header) {
-      background: var(--white);
-    }
-    .compare-row:not(.header):nth-child(odd) {
-      background: rgba(255,255,255,0.6);
-    }
-
-    .compare-cell.winner {
-      color: var(--teal-dark);
-      font-weight: 700;
-    }
-
-    .compare-cell .tag {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      border-radius: 100px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      background: var(--teal);
-      color: var(--white);
-      margin-left: 0.5rem;
-    }
-
-    /* How it works (earn side) */
-    .earn-section { background: var(--gray-900); color: var(--white); }
-    .earn-section .section-header p { color: var(--gray-400); }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-
-    .step {
-      text-align: center;
-      padding: 2rem 1.5rem;
-    }
-
-    .step-number {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background: rgba(13,148,136,0.15);
-      border: 2px solid rgba(13,148,136,0.3);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--teal-light);
+    .earn-step { text-align: center; padding: 2rem 1.5rem; }
+    .earn-step-num {
+      width: 56px; height: 56px; border-radius: 16px;
+      background: var(--teal-50); border: 2px solid var(--teal-100);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; font-weight: 800; color: var(--teal);
       margin-bottom: 1.5rem;
     }
-
-    .step h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .step p {
-      color: var(--gray-400);
-      line-height: 1.6;
-    }
+    .earn-step h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .earn-step p { color: var(--gray-700); line-height: 1.6; }
 
     .earnings-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
     }
-
     .earning-card {
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.2s;
+      border: 1px solid rgba(0,0,0,0.08); border-radius: 16px;
+      padding: 2rem; text-align: center; transition: all 0.2s;
     }
-    .earning-card:hover {
-      border-color: var(--teal);
-      box-shadow: 0 4px 20px rgba(13,148,136,0.15);
-    }
-
+    .earning-card:hover { border-color: var(--teal); box-shadow: 0 4px 20px rgba(13,148,136,0.1); }
     .earning-card .device {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
+      font-size: 0.85rem; font-weight: 600; color: var(--gray-400);
+      text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;
     }
-    .earning-card .chip {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.25rem;
-    }
-    .earning-card .ram {
-      font-size: 0.9rem;
-      color: var(--gray-400);
-      margin-bottom: 1.5rem;
-    }
-    .earning-card .amount {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--teal-light);
-      line-height: 1;
-    }
-    .earning-card .period {
-      font-size: 0.9rem;
-      color: var(--gray-400);
-      margin-top: 0.25rem;
-    }
+    .earning-card .chip { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .earning-card .ram { font-size: 0.9rem; color: var(--gray-700); margin-bottom: 1.5rem; }
+    .earning-card .amount { font-size: 2.5rem; font-weight: 800; color: var(--teal); line-height: 1; }
+    .earning-card .period { font-size: 0.9rem; color: var(--gray-700); margin-top: 0.25rem; }
 
-    /* Features */
+    /* ── Features ── */
+    .features-section { background: var(--gray-900); color: var(--white); }
+    .features-section .section-header p { color: var(--gray-400); }
     .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
     }
-
     .feature-card {
-      border: 1px solid rgba(0,0,0,0.08);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: border-color 0.2s;
+      background: var(--gray-800); border-radius: 16px; padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.06); transition: border-color 0.2s;
     }
-    .feature-card:hover { border-color: var(--teal); }
-
+    .feature-card:hover { border-color: rgba(13,148,136,0.3); }
     .feature-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: var(--teal-50);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 1.2rem;
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(13,148,136,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.2rem;
     }
+    .feature-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .feature-card p { color: var(--gray-400); line-height: 1.6; font-size: 0.95rem; }
 
-    .feature-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature-card p {
-      color: var(--gray-700);
-      line-height: 1.6;
-      font-size: 0.95rem;
-    }
-
-    /* CTA */
+    /* ── CTA ── */
     .cta-section {
       background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-      color: var(--white);
-      text-align: center;
-      padding: 6rem 2rem;
+      color: var(--white); text-align: center; padding: 6rem 2rem;
     }
-
     .cta-section h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 1rem;
     }
-
     .cta-section p {
-      font-size: 1.15rem;
-      opacity: 0.9;
-      max-width: 500px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
+      font-size: 1.15rem; opacity: 0.9;
+      max-width: 520px; margin: 0 auto 2rem; line-height: 1.6;
     }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     footer {
-      padding: 3rem 2rem;
-      text-align: center;
-      color: var(--gray-400);
-      font-size: 0.9rem;
+      padding: 3rem 2rem; text-align: center; color: var(--gray-400); font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .steps { grid-template-columns: 1fr; }
-      .features-grid { grid-template-columns: 1fr; }
+      .paths-grid { grid-template-columns: 1fr; }
+      .cost-grid { grid-template-columns: 1fr; }
+      .earn-steps { grid-template-columns: 1fr; }
       .earnings-grid { grid-template-columns: 1fr; }
-      .speed-stats { grid-template-columns: 1fr; }
-      .compare-row { grid-template-columns: 1fr; }
-      .compare-row.header { display: none; }
-      .compare-cell { padding: 0.75rem 1.5rem; }
+      .features-grid { grid-template-columns: 1fr; }
       section { padding: 4rem 1.5rem; }
     }
-
     @media (max-width: 480px) {
       .hero { padding: 6rem 1.5rem 3rem; }
-      .hero-ctas { flex-direction: column; align-items: center; }
-      .cta-buttons { flex-direction: column; align-items: center; }
+      .hero-ctas, .cta-buttons { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -578,27 +352,97 @@
   <nav>
     <a href="/" class="logo">teale</a>
     <div class="nav-links">
-      <a href="#pricing">Pricing</a>
+      <a href="#use">Use AI</a>
       <a href="#earn">Earn</a>
-      <a href="#features">Features</a>
-      <a href="#api" class="btn btn-primary">Get API Key</a>
+      <a href="#developers">Developers</a>
+      <a href="#download" class="btn btn-primary">Download</a>
     </div>
   </nav>
 
-  <!-- Hero: Lead with instant compute -->
+  <!-- ── Hero ── -->
   <section class="hero">
-    <div class="hero-badge">
-      <span class="dot"></span>
-      Live now &mdash; no waitlist
-    </div>
-    <h1>AI compute in<br><span class="highlight">30 seconds.</span></h1>
-    <p class="subtitle">No account. No credit card. No approval process. Send USDC, get an API key, start running inference. OpenAI-compatible. Up to 100x cheaper.</p>
+    <h1>AI for <span class="highlight">everyone.</span></h1>
+    <p class="subtitle">Everyone uses AI. Not everyone can afford $20&ndash;$200 a month for it. Teale makes AI free to run on your own Mac &mdash; or 100x cheaper than OpenAI on the network. And if you have a Mac sitting idle, it pays you.</p>
     <div class="hero-ctas">
-      <a href="#api" class="btn btn-primary btn-large">Get Your API Key</a>
-      <a href="#earn" class="btn btn-outline btn-large">Earn With Your Mac</a>
+      <a href="#download" class="btn btn-primary btn-large">Download for Mac</a>
+      <a href="#developers" class="btn btn-dark btn-large">Get API Access</a>
     </div>
+  </section>
 
-    <div class="hero-terminal">
+  <!-- ── Two Paths ── -->
+  <section id="use" class="paths-section">
+    <div class="paths-grid">
+
+      <div class="path-card use-ai">
+        <div class="path-label">Use AI</div>
+        <h2>Run it yourself. Completely free.</h2>
+        <p>Install Teale on your Mac and download any open model. It runs locally on your hardware &mdash; no internet, no subscription, no data leaving your machine. Ever.</p>
+        <ul>
+          <li>Llama, Qwen, Mistral, Gemma &mdash; all built in</li>
+          <li>Runs 100% locally on Apple Silicon</li>
+          <li>No account, no login, no tracking</li>
+          <li>Works completely offline</li>
+        </ul>
+        <div class="path-price">$0</div>
+        <div class="path-price-note">Free forever. Just your Mac and electricity.</div>
+        <a href="#download" class="btn btn-primary btn-large" style="align-self:flex-start">Download Teale</a>
+      </div>
+
+      <div class="path-card earn">
+        <div class="path-label">Earn Money</div>
+        <h2>Your Mac earns while you sleep.</h2>
+        <p>When you're not using your Mac, Teale serves AI requests from the network. You get paid for every request. More powerful hardware earns more.</p>
+        <ul>
+          <li>Runs only when you're idle</li>
+          <li>Smart throttling &mdash; respects thermals and battery</li>
+          <li>8 GB Mac: ~$10/mo &bull; 16 GB: ~$25/mo</li>
+          <li>36 GB+: ~$60/mo and up</li>
+        </ul>
+        <div class="path-price">$10&ndash;$60+</div>
+        <div class="path-price-note">Per month, passively. Just leave it running.</div>
+        <a href="#download" class="btn btn-dark btn-large" style="align-self:flex-start">Start Earning</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Pricing ── -->
+  <section id="pricing" class="cost-section">
+    <div class="section-center">
+      <div class="section-header">
+        <h2>What AI actually costs</h2>
+        <p>The big providers charge $20&ndash;$200/month. We think that prices a lot of people out. Here's what the same AI costs on Teale.</p>
+      </div>
+      <div class="cost-grid">
+        <div class="cost-card them">
+          <div class="provider">ChatGPT / Claude</div>
+          <div class="price">$20</div>
+          <div class="unit">per month (or $200 for Pro)</div>
+          <div class="desc">Monthly subscription. Needs an account, credit card, internet.</div>
+        </div>
+        <div class="cost-card free">
+          <div class="provider">Teale &mdash; Local</div>
+          <div class="price">$0</div>
+          <div class="unit">forever</div>
+          <div class="desc">Download the app, pick a model, start chatting. Runs on your Mac. No internet needed.</div>
+        </div>
+        <div class="cost-card network">
+          <div class="provider">Teale &mdash; Network</div>
+          <div class="price">$0.05</div>
+          <div class="unit">per 1M tokens</div>
+          <div class="desc">Access larger models across the network. $1 gets you 20 million tokens. No subscription.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Developer / API Access ── -->
+  <section id="developers" class="demo-section">
+    <div class="section-center">
+      <div class="section-header">
+        <h2>For developers: compute in 30 seconds</h2>
+        <p>No account. No credit card. No approval queue. Deposit USDC, get an API key, hit the endpoint. OpenAI-compatible &mdash; change one line of code.</p>
+      </div>
       <div class="terminal">
         <div class="terminal-bar">
           <span></span><span></span><span></span>
@@ -606,21 +450,19 @@
         </div>
         <div class="terminal-body">
           <div class="terminal-step">
-            <div class="step-label">Step 1 &mdash; Get your key (one time)</div>
+            <div class="step-label">Step 1 &mdash; Get your key</div>
             <span class="prompt">$</span> <span class="cmd">curl</span> <span class="flag">-X POST</span> <span class="string">https://api.teale.com/v1/keys/create</span> \<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="flag">-d</span> <span class="string">'{"wallet_address": "0xYOUR_WALLET"}'</span><br>
             <br>
             <span class="output">{"api_key": "sk-teale-a1b2c3...", "message": "Send USDC to fund your account"}</span>
           </div>
-
           <div class="terminal-step">
             <div class="step-label">Step 2 &mdash; Fund with USDC on Base (any amount)</div>
-            <span class="dim"># Send USDC to the deposit address from your wallet.</span><br>
-            <span class="dim"># $1 = 20 million tokens. Balance credited in ~15 seconds.</span>
+            <span class="comment"># Send USDC to the deposit address from your wallet.</span><br>
+            <span class="comment"># $1 = 20 million tokens. Balance credited in ~15 seconds.</span>
           </div>
-
           <div class="terminal-step">
-            <div class="step-label">Step 3 &mdash; Use it (drop-in OpenAI replacement)</div>
+            <div class="step-label">Step 3 &mdash; Drop-in OpenAI replacement</div>
             <span class="prompt">$</span> <span class="cmd">curl</span> <span class="string">https://api.teale.com/v1/chat/completions</span> \<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="flag">-H</span> <span class="string">"Authorization: Bearer sk-teale-a1b2c3..."</span> \<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="flag">-H</span> <span class="string">"Content-Type: application/json"</span> \<br>
@@ -633,95 +475,28 @@
     </div>
   </section>
 
-  <!-- Speed stats -->
-  <section>
-    <div class="section-center">
-      <div class="speed-stats">
-        <div class="speed-stat">
-          <div class="big">30s</div>
-          <div class="label">From zero to API key</div>
-        </div>
-        <div class="speed-stat">
-          <div class="big">$0.05</div>
-          <div class="label">Per 1M tokens</div>
-        </div>
-        <div class="speed-stat">
-          <div class="big">0</div>
-          <div class="label">Signups required</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing comparison -->
-  <section id="pricing" class="compare-section">
-    <div class="section-center">
-      <div class="section-header">
-        <h2>100x cheaper than cloud APIs</h2>
-        <p>Same quality open models. Fraction of the cost. No vendor lock-in.</p>
-      </div>
-      <div class="compare-table">
-        <div class="compare-row header">
-          <div class="compare-cell"></div>
-          <div class="compare-cell">Cloud APIs</div>
-          <div class="compare-cell">Teale</div>
-        </div>
-        <div class="compare-row">
-          <div class="compare-cell">Cost per 1M tokens</div>
-          <div class="compare-cell">$2 &ndash; $15</div>
-          <div class="compare-cell winner">$0.05 <span class="tag">100x</span></div>
-        </div>
-        <div class="compare-row">
-          <div class="compare-cell">Signup required</div>
-          <div class="compare-cell">Email, credit card, approval</div>
-          <div class="compare-cell winner">No. Just a wallet.</div>
-        </div>
-        <div class="compare-row">
-          <div class="compare-cell">Time to first request</div>
-          <div class="compare-cell">Minutes to days</div>
-          <div class="compare-cell winner">30 seconds</div>
-        </div>
-        <div class="compare-row">
-          <div class="compare-cell">Payment</div>
-          <div class="compare-cell">Credit card, invoicing</div>
-          <div class="compare-cell winner">USDC on Base L2</div>
-        </div>
-        <div class="compare-row">
-          <div class="compare-cell">API format</div>
-          <div class="compare-cell">OpenAI-compatible</div>
-          <div class="compare-cell winner">OpenAI-compatible</div>
-        </div>
-        <div class="compare-row">
-          <div class="compare-cell">Models</div>
-          <div class="compare-cell">GPT-4o, Claude, etc.</div>
-          <div class="compare-cell">Llama, Qwen, Mistral, Gemma</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Earn section -->
+  <!-- ── Earn Details ── -->
   <section id="earn" class="earn-section">
     <div class="section-center">
       <div class="section-header">
-        <h2>Have a Mac? Make money while you sleep.</h2>
-        <p>Your Mac's AI chip sits idle most of the day. Install Teale and it earns you money by serving inference requests when you're not using it.</p>
+        <h2>Passive income from your Mac</h2>
+        <p>Three steps. No configuration. Leave it running and check your earnings.</p>
       </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
+      <div class="earn-steps">
+        <div class="earn-step">
+          <div class="earn-step-num">1</div>
           <h3>Install Teale</h3>
-          <p>Lightweight menu bar app. No configuration &mdash; it detects your hardware automatically.</p>
+          <p>Lightweight menu bar app. Detects your hardware automatically.</p>
         </div>
-        <div class="step">
-          <div class="step-number">2</div>
+        <div class="earn-step">
+          <div class="earn-step-num">2</div>
           <h3>Leave It Running</h3>
-          <p>Smart throttling only uses your Mac when you're idle. Respects thermals, battery, and activity.</p>
+          <p>Only uses your Mac when you're idle. Respects thermals, battery, activity.</p>
         </div>
-        <div class="step">
-          <div class="step-number">3</div>
+        <div class="earn-step">
+          <div class="earn-step-num">3</div>
           <h3>Get Paid</h3>
-          <p>Earn for every request served. More RAM and faster chips earn more, automatically.</p>
+          <p>Earn for every request. More RAM and faster chips earn more.</p>
         </div>
       </div>
       <div class="earnings-grid">
@@ -750,28 +525,28 @@
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features">
+  <!-- ── Features ── -->
+  <section class="features-section">
     <div class="section-center">
       <div class="section-header">
         <h2>Built for Apple Silicon</h2>
-        <p>Native performance. Zero compromise on your daily workflow.</p>
+        <p>Native performance. Zero compromise on your workflow.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">&#9889;</div>
           <h3>Adaptive Throttling</h3>
-          <p>Automatically scales down when you're active, ramps up when idle. Respects thermal limits, battery, and Low Power Mode.</p>
+          <p>Scales down when you're active, ramps up when idle. Respects thermal limits, battery, and Low Power Mode.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#128274;</div>
           <h3>Private &amp; Secure</h3>
-          <p>End-to-end encrypted connections with cryptographic node identity. Your data stays yours.</p>
+          <p>End-to-end encrypted. Cryptographic node identity. Your data stays on your machine.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#127760;</div>
           <h3>Global P2P Network</h3>
-          <p>Direct peer-to-peer via QUIC with automatic NAT traversal. No ports to open, no configuration.</p>
+          <p>Direct peer-to-peer via QUIC with automatic NAT traversal. No ports to configure.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">&#128640;</div>
@@ -782,15 +557,15 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="api" class="cta-section">
-    <h2>Get compute in 30 seconds</h2>
-    <p>No account. No approval. No credit card. Just USDC and a curl command.</p>
+  <!-- ── CTA ── -->
+  <section id="download" class="cta-section">
+    <h2>AI should be for everyone</h2>
+    <p>Free on your Mac. 100x cheaper on the network. And your idle hardware earns money while you're away.</p>
     <div class="cta-buttons">
-      <a href="#" class="btn btn-white btn-large">Get API Key</a>
-      <a href="#" class="btn btn-outline btn-large">Download for Mac</a>
+      <a href="#" class="btn btn-white btn-large">Download for macOS</a>
+      <a href="#developers" class="btn btn-outline-light btn-large">Get API Access</a>
     </div>
-    <p style="margin-top:1.5rem;font-size:0.85rem;opacity:0.7">OpenAI-compatible API. Works with any client library. macOS app requires Sonoma 14+ on Apple Silicon.</p>
+    <p style="margin-top:1.5rem;font-size:0.85rem;opacity:0.7">Requires macOS 14 Sonoma or later. Apple Silicon only.</p>
   </section>
 
   <footer>
