@@ -96,6 +96,28 @@
     }
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
+    /* ── Network Stats Bar ── */
+    .network-stats {
+      display: flex; justify-content: center; gap: 3rem;
+      padding: 2rem 2rem;
+      background: var(--gray-900);
+      color: var(--white);
+    }
+    .stat-item { text-align: center; }
+    .stat-value {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800; letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--teal-light), #5eead4);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .stat-label {
+      font-size: 0.85rem; color: var(--gray-400);
+      margin-top: 0.25rem; font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .network-stats { gap: 1.5rem; flex-wrap: wrap; }
+    }
+
     /* ── Two Paths ── */
     .paths-section { padding: 5rem 2rem; }
     .paths-grid {
@@ -423,6 +445,22 @@
     </div>
   </section>
 
+  <!-- ── Network Stats ── -->
+  <section class="network-stats">
+    <div class="stat-item">
+      <div class="stat-value" id="stat-devices">&mdash;</div>
+      <div class="stat-label">Devices Online</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" id="stat-ram">&mdash;</div>
+      <div class="stat-label">Total Network RAM</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" id="stat-tokens">&mdash;</div>
+      <div class="stat-label">Tokens Served</div>
+    </div>
+  </section>
+
   <!-- ── Two Paths ── -->
   <section id="use" class="paths-section">
     <div class="paths-grid">
@@ -738,5 +776,20 @@
     <p>&copy; 2026 Teale. All rights reserved.</p>
   </footer>
 
+<script>
+  fetch('/stats.json')
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById('stat-devices').textContent = d.devices.toLocaleString();
+      document.getElementById('stat-ram').textContent = d.totalRAMGB.toLocaleString() + ' GB';
+      const tokens = d.tokensServed;
+      document.getElementById('stat-tokens').textContent =
+        tokens >= 1e9 ? (tokens / 1e9).toFixed(1) + 'B' :
+        tokens >= 1e6 ? (tokens / 1e6).toFixed(1) + 'M' :
+        tokens >= 1e3 ? (tokens / 1e3).toFixed(1) + 'K' :
+        tokens.toLocaleString();
+    })
+    .catch(() => {});
+</script>
 </body>
 </html>
