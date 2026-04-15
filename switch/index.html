@@ -302,9 +302,9 @@
   <nav>
     <a href="/" class="logo">teale</a>
     <div class="nav-links">
-      <a href="/#use">Use AI</a>
-      <a href="/#earn">Earn</a>
-      <a href="/#developers">Developers</a>
+      <a href="/">Home</a>
+      <a href="/openclaw/">OpenClaw</a>
+      <a href="/hermes-agent/">Hermes Agent</a>
       <a href="/docs/">Docs</a>
       <a href="#migrate" class="btn btn-primary">Switch Now</a>
     </div>
@@ -312,10 +312,10 @@
 
   <!-- ── Hero ── -->
   <section class="hero">
-    <div class="hero-badge">For OpenClaw, Hermes Agent, and other third-party client users</div>
+    <div class="hero-badge">For third-party AI client users</div>
     <h1>Your client got blocked. <br><span class="highlight">Your AI doesn't have to stop.</span></h1>
     <p class="subtitle">
-      Anthropic cut off third-party harnesses from using Claude subscriptions. Teale gives you the same models through a decentralized network &mdash; no corporation decides when you lose access. Switch in 30 seconds.
+      Centralized AI providers are cutting off third-party clients. Teale gives you OpenAI-compatible inference through a decentralized network &mdash; no corporation decides when you lose access. Switch in 30 seconds.
     </p>
     <div class="hero-ctas">
       <a href="#migrate" class="btn btn-white btn-large">Switch in 30 seconds</a>
@@ -365,76 +365,18 @@
         <p>Teale's API is OpenAI-compatible. Point your existing client at localhost and you're done.</p>
       </div>
 
+      <div style="text-align:center;margin-bottom:3rem;font-size:0.95rem;color:var(--gray-400);">
+        Looking for a specific client? <a href="/openclaw/" style="color:var(--teal-light)">OpenClaw</a> &middot; <a href="/hermes-agent/" style="color:var(--teal-light)">Hermes Agent</a>
+      </div>
+
       <div class="harness-tabs">
-        <button class="harness-tab active" data-harness="openclaw">OpenClaw</button>
-        <button class="harness-tab" data-harness="hermes">Hermes Agent</button>
-        <button class="harness-tab" data-harness="openai-sdk">OpenAI SDK</button>
+        <button class="harness-tab active" data-harness="openai-sdk">OpenAI SDK</button>
         <button class="harness-tab" data-harness="continue">Continue.dev</button>
         <button class="harness-tab" data-harness="any">Any Client</button>
       </div>
 
-      <!-- OpenClaw -->
-      <div class="harness-content active" data-harness="openclaw">
-        <div class="terminal">
-          <div class="terminal-bar">
-            <span></span><span></span><span></span>
-            <div class="title">Switching from OpenClaw to Teale</div>
-          </div>
-          <div class="terminal-body">
-            <div class="terminal-step">
-              <div class="step-label">1. Install Teale (one command)</div>
-              <span class="prompt">$</span> <span class="cmd">curl</span> <span class="flag">-fsSL</span> <span class="string">https://teale.com/install.sh</span> <span class="cmd">| sh</span><br>
-              <span class="comment"># Installs the app + starts the local API server on port 11434</span>
-            </div>
-            <div class="terminal-step">
-              <div class="step-label">2. Update your OpenClaw config</div>
-              <span class="comment"># In OpenClaw settings, change your API endpoint:</span><br>
-              <span class="comment"># Old: https://api.anthropic.com/v1</span><br>
-              <span class="comment"># New:</span> <span class="string">http://localhost:11434/v1</span><br>
-              <span class="comment"># That's it. OpenClaw works with any OpenAI-compatible API.</span>
-            </div>
-            <div class="terminal-step">
-              <div class="step-label">3. Chat like nothing changed</div>
-              <span class="comment"># Your conversations, presets, and system prompts all work.</span><br>
-              <span class="comment"># Models run on your Mac. No subscription. No rate limits.</span><br>
-              <span class="output">Ready. Using Llama 3.1 8B on local hardware.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hermes Agent -->
-      <div class="harness-content" data-harness="hermes">
-        <div class="terminal">
-          <div class="terminal-bar">
-            <span></span><span></span><span></span>
-            <div class="title">Switching from Hermes Agent to Teale</div>
-          </div>
-          <div class="terminal-body">
-            <div class="terminal-step">
-              <div class="step-label">1. Install Teale</div>
-              <span class="prompt">$</span> <span class="cmd">curl</span> <span class="flag">-fsSL</span> <span class="string">https://teale.com/install.sh</span> <span class="cmd">| sh</span><br>
-              <span class="comment"># Teale runs a local API server on port 11434</span>
-            </div>
-            <div class="terminal-step">
-              <div class="step-label">2. Point Hermes at your local server</div>
-              <span class="comment"># In Hermes Agent settings:</span><br>
-              <span class="comment"># Provider: OpenAI-compatible</span><br>
-              <span class="comment"># Base URL:</span> <span class="string">http://localhost:11434/v1</span><br>
-              <span class="comment"># API Key:</span> <span class="string">teale</span> <span class="comment">(any non-empty string works locally)</span>
-            </div>
-            <div class="terminal-step">
-              <div class="step-label">3. Resume your agent workflows</div>
-              <span class="comment"># All Hermes features work &mdash; tool use, chains, memory.</span><br>
-              <span class="comment"># Teale serves the same OpenAI chat completions format.</span><br>
-              <span class="output">Ready. Agent connected to local Teale instance.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- OpenAI SDK -->
-      <div class="harness-content" data-harness="openai-sdk">
+      <div class="harness-content active" data-harness="openai-sdk">
         <div class="terminal">
           <div class="terminal-bar">
             <span></span><span></span><span></span>
